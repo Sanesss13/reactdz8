@@ -1,0 +1,2 @@
+
+export const ADD_CHAT_ACTION = "MESSAGES::ADD_CHAT_ACTION";

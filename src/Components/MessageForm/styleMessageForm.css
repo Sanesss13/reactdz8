@@ -1,0 +1,36 @@
+.message-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.message-form__author {
+  width: 100px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  color: #000;
+}
+
+.message-form__text {
+  height: 65px;
+  resize: none;
+  border-radius: 0px 10px 5px 20px;
+}
+
+.message-form__submit {
+  width: 100px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.message-form__text,
+.message-form__author {
+  outline: none;
+}
+/*# sourceMappingURL=styleMessageForm.css.map */

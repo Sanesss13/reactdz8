@@ -1,0 +1,2 @@
+
+export const ADD_MESSAGE_ACTION = "ADD_MESSAGE_ACTION";
