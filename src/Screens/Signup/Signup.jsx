@@ -32,7 +32,7 @@ export const SignUp = () => {
         <button onClick={handleSignup}>Submit</button>
       </div>
       <div>
-        Already registered? <Link to="/sign-in">sign in</Link>
+        Уже зарегистрирован? <Link to="/sign-in">Войти</Link>
       </div>
     </div>
   );
