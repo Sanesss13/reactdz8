@@ -1,19 +1,21 @@
 
-import { TOGGLE_USER_NAME_ACTION } from "./constants"
+import { TOGGLE_SHOW_NAME_ACTION, CHANGE_USER_NAME_ACTION } from "./constants";
+
 const initialState = {
     showName: true,
-    name: 'Sasha'
-}
+    name: "Sasha",
+};
 
-export const profileReducer = (state = initialState, action) => {
+export const profileReducer = (store = initialState, action) => {
     switch (action.type) {
-        case TOGGLE_USER_NAME_ACTION:
+        case TOGGLE_SHOW_NAME_ACTION:
             return {
-                ...state,
-                showName: !state.showName
-            }
-        default:
-            return state
+                ...store,
+                showName: !store.showName,
+            };
+        default: {
+            return store;
+        }
     }
-}
+};
 

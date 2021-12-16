@@ -1,5 +1,5 @@
-import { TOGGLE_USER_NAME_ACTION } from "./constants"
+import { TOGGLE_SHOW_NAME_ACTION } from "./constants";
 
-export const toggleUserNameAction = () => ({
-    type: TOGGLE_USER_NAME_ACTION
+export const toggleShowNameAction = () => ({
+    type: TOGGLE_SHOW_NAME_ACTION,
 });

@@ -4,11 +4,15 @@ import React from "react";
 import { Home } from "../Screens/Home"
 import { Profile } from "../Screens/Profile"
 import { Chats } from "../Screens/Chats"
+import { SignIn } from "../Screens/Signin"
+import { SignUp } from "../Screens/Signup"
 
 const ROUTES = {
   HOME: "/",
   PROFILE: "profile",
   CHATS: "chats",
+  SING_IN: "sign-in",
+  SING_UP: "sign-up"
 }
 export const Router = () => {
   return (
@@ -24,6 +28,12 @@ export const Router = () => {
           <li>
             <Link to={ROUTES.HOME}>Home</Link>
           </li>
+          <li>
+            <Link to={ROUTES.SING_IN}>SingIn</Link>
+          </li>
+          <li>
+            <Link to={ROUTES.SING_UP}>SingUp</Link>
+          </li>
         </ul>
       </header>
       <Switch>
@@ -33,8 +43,14 @@ export const Router = () => {
         <Route exact path="/profile">
           <Profile />
         </Route>
-        <Route exact patch="/chats">
+        <Route exact path="/chats">
           <Chats />
+        </Route>
+        <Route exact path="/sign-up">
+          <SignUp />
+        </Route>
+        <Route exact path="/sign-in">
+          <SignIn />
         </Route>
       </Switch>
     </BrowserRouter>

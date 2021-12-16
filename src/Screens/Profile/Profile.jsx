@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { store } from "../../Store";
-import { toggleUserNameAction } from "../../Store/profile/actions";
+import { toggleShowNameAction } from "../../Store/profile/actions";
 
 export const Profile = () => {
   const { getState } = store
@@ -9,7 +9,7 @@ export const Profile = () => {
   const [dummy, setDummy] = useState({});
 
   const handleToggleShowName = () => {
-    dispatch(toggleUserNameAction())
+    dispatch(toggleShowNameAction())
     setDummy({});
   }
   return (
@@ -19,10 +19,10 @@ export const Profile = () => {
         type="checkbox"
         checked={showName}
         value={showName}
-        onChange={handleToggleShowName}
+        onChange={toggleShowNameAction}
       />
-      <button onClick={handleToggleShowName}>Показать имя</button>
-      {showName && <div>{name}</div>}
+      <button onClick={toggleShowNameAction}>Показать имя</button>
+      <div>{showName && name}</div>
     </div>
   );
 }
