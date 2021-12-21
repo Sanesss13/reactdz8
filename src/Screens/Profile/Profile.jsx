@@ -6,11 +6,9 @@ export const Profile = () => {
   const { getState } = store
   const { dispatch } = store
   const { showName, name } = getState();
-  const [dummy, setDummy] = useState({});
 
   const handleToggleShowName = () => {
     dispatch(toggleShowNameAction())
-    setDummy({});
   }
   return (
     <div>
@@ -19,9 +17,9 @@ export const Profile = () => {
         type="checkbox"
         checked={showName}
         value={showName}
-        onChange={toggleShowNameAction}
+        onChange={handleToggleShowName}
       />
-      <button onClick={toggleShowNameAction}>Показать имя</button>
+      <button onClick={handleToggleShowName}>Показать имя</button>
       <div>{showName && name}</div>
     </div>
   );
