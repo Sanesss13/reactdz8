@@ -45,7 +45,7 @@ export function MessageForm({ messageList, setMessageList }) {
         value={messageText}
         onChange={handleTextChange}
         placeholder="Сообщение"
-        autofocus
+        autoFocus
       ></TextField>
       <input
         className="message-form__submit"
